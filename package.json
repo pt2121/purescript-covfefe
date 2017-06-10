@@ -1,0 +1,23 @@
+{
+  "name": "tweet",
+  "description": "Actions on Google + Api.Ai + PureScript webhook demo",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache Version 2.0",
+  "author": "prat t",
+  "engines": {
+    "node": "~6.0"
+  },
+  "scripts": {
+    "lint": "semistandard --fix \"**/*.js\"",
+    "start": "functions deploy tweet --trigger-http",
+    "deploy": "gcloud beta functions deploy tweet --trigger-http --stage-bucket <storage_bucket_name>"
+  },
+  "dependencies": {
+    "xhr2": "^0.1.4",
+    "actions-on-google": "^1.0.0"
+  },
+  "devDependencies": {
+    "semistandard": "^9.1.0"
+  }
+}
